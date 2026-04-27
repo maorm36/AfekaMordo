@@ -1,0 +1,707 @@
+/* ==========================================================================
+   Five Stunning Places  —  Shared Stylesheet
+   Afeka course assignment  /  Author: Mordo
+   Aesthetic: refined editorial minimalism
+   Constraints: only basic tags, no flexbox, no grid, no javascript
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700&display=swap");
+
+/* --------------------------------------------------------------------------
+   1. Reset & base
+   -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f2ea;
+  color: #141414;
+  font-family: "Manrope", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. Typography
+   -------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  color: #141414;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: 92px;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 44px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  margin-top: 72px;
+}
+
+h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #8a7a64;
+  margin-bottom: 14px;
+}
+
+p {
+  margin-bottom: 22px;
+  color: #2a2622;
+  max-width: 62ch;
+}
+
+a {
+  color: #b8431d;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+a:hover {
+  color: #7a2c13;
+  border-bottom-color: #b8431d;
+}
+
+.lede {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: #3a3a3a;
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Layout wrappers
+   -------------------------------------------------------------------------- */
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 48px 120px 48px;
+}
+
+.rule {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #d8cfbe;
+  margin: 48px 0;
+  border: 0;
+}
+
+.rule-thin {
+  display: block;
+  width: 64px;
+  height: 1px;
+  background-color: #141414;
+  margin: 0 0 32px 0;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Top bar  (simple site header, used on every page)
+   -------------------------------------------------------------------------- */
+
+.topbar {
+  width: 100%;
+  padding: 24px 48px;
+  border-bottom: 1px solid #e0d8c7;
+  background-color: #f6f2ea;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.brand {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  color: #141414;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.brand-meta {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8a7a64;
+  float: right;
+  margin-top: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Homepage hero
+   -------------------------------------------------------------------------- */
+
+.eyebrow {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #b8431d;
+  margin-bottom: 28px;
+  display: block;
+}
+
+.hero-title {
+  font-size: 104px;
+  font-weight: 300;
+  line-height: 0.95;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: #b8431d;
+}
+
+.hero-meta {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8a7a64;
+}
+
+.hero-meta span {
+  display: inline-block;
+  margin-right: 28px;
+}
+
+/* --------------------------------------------------------------------------
+   6. Destination index  (list of 5 places on homepage)
+   -------------------------------------------------------------------------- */
+
+.index-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.index-table tr {
+  border-top: 1px solid #d8cfbe;
+  transition: background-color 0.3s ease;
+}
+
+.index-table tr:last-child {
+  border-bottom: 1px solid #d8cfbe;
+}
+
+.index-table tr:hover {
+  background-color: #efe8d9;
+}
+
+.index-table td {
+  padding: 28px 16px;
+  vertical-align: middle;
+}
+
+.index-num {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: #8a7a64;
+  width: 60px;
+}
+
+.index-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #141414;
+  letter-spacing: -0.01em;
+}
+
+.index-name a {
+  color: inherit;
+  border-bottom: 0;
+}
+
+.index-table tr:hover .index-name a {
+  font-style: italic;
+  color: #b8431d;
+}
+
+.index-country {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #6a6258;
+  text-align: left;
+  width: 200px;
+}
+
+.index-arrow {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 22px;
+  color: #8a7a64;
+  text-align: right;
+  width: 60px;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.index-table tr:hover .index-arrow {
+  color: #b8431d;
+  transform: translateX(6px);
+}
+
+/* --------------------------------------------------------------------------
+   7. World map with pins
+   -------------------------------------------------------------------------- */
+
+.map-section {
+  margin-top: 96px;
+}
+
+.map-wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 24px auto 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e0d8c7;
+  padding: 24px;
+}
+
+.map-inner {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.map-wrap img.worldmap {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.85;
+}
+
+.pin {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  margin-top: -7px;
+  background-color: #b8431d;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(184, 67, 29, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  z-index: 3;
+}
+
+.pin:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 8px rgba(184, 67, 29, 0.22);
+}
+
+.pin-label {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  margin-left: 0;
+  transform: translateX(-50%);
+  background-color: #141414;
+  color: #f6f2ea;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    top 0.25s ease;
+  pointer-events: none;
+}
+
+.pin:hover .pin-label {
+  opacity: 1;
+  top: -34px;
+}
+
+/* Pin coordinates calibrated for the real world map (Natural Earth via
+   world-atlas@2, CC0, 177 countries) in equirectangular projection.
+   Formulas: left = (lng + 180) / 360,  top = (90 - lat) / 180. */
+.pin-kyoto {
+  top: 30.6%;
+  left: 87.7%;
+} /* 35.01 N, 135.77 E */
+.pin-petra {
+  top: 33.2%;
+  left: 59.8%;
+} /* 30.33 N,  35.44 E */
+.pin-banff {
+  top: 21.6%;
+  left: 17.9%;
+} /* 51.18 N, 115.55 W */
+.pin-santorini {
+  top: 29.8%;
+  left: 57.1%;
+} /* 36.39 N,  25.46 E */
+.pin-patagonia {
+  top: 77.8%;
+  left: 29.7%;
+} /* 50.00 S,  73.00 W */
+
+/* --------------------------------------------------------------------------
+   8. Destination page  (table-based layout)
+   -------------------------------------------------------------------------- */
+
+.destination-header {
+  padding-top: 24px;
+  padding-bottom: 56px;
+}
+
+.destination-number {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #b8431d;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.destination-title {
+  font-size: 118px;
+  font-weight: 300;
+  line-height: 0.95;
+  margin-bottom: 16px;
+}
+
+.destination-title em {
+  font-style: italic;
+  color: #b8431d;
+}
+
+.destination-country {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8a7a64;
+  margin-bottom: 0;
+}
+
+/* ---- Hero image on each destination page ---- */
+
+.destination-hero {
+  width: 100%;
+  margin: 32px 0 0 0;
+  overflow: hidden;
+}
+
+.destination-hero img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  transition: transform 1.4s ease;
+}
+
+.destination-hero:hover img {
+  transform: scale(1.03);
+}
+
+.image-caption {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a7a64;
+  margin-top: 14px;
+  text-align: right;
+}
+
+/* ---- Table layout for destination content (assignment: layout in table) ---- */
+
+.layout {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 72px;
+  table-layout: fixed;
+}
+
+.layout td {
+  vertical-align: top;
+  padding: 40px 28px;
+}
+
+.layout .col-narrow {
+  width: 34%;
+  border-right: 1px solid #d8cfbe;
+}
+
+.layout .col-wide {
+  width: 66%;
+  padding-left: 56px;
+}
+
+.section-num {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 56px;
+  font-weight: 300;
+  font-style: italic;
+  color: #b8431d;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.section-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #141414;
+}
+
+.section-body h2 {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+/* alternating row separator */
+.layout tr {
+  border-top: 1px solid #d8cfbe;
+}
+
+.layout tr.layout-row td {
+  border-top: 1px solid #d8cfbe;
+}
+
+/* inline image in a table cell */
+.inline-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin-top: 24px;
+}
+
+/* ---- A side-by-side image row (still a table) ---- */
+
+.gallery {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 16px;
+  margin-top: 48px;
+}
+
+.gallery td {
+  padding: 0;
+  vertical-align: top;
+  width: 50%;
+}
+
+.gallery img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.gallery td:hover img {
+  transform: scale(1.04);
+}
+
+/* --------------------------------------------------------------------------
+   9. Pull quote
+   -------------------------------------------------------------------------- */
+
+.pullquote {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 38px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.25;
+  color: #141414;
+  padding: 72px 48px;
+  margin: 72px 0;
+  border-top: 1px solid #d8cfbe;
+  border-bottom: 1px solid #d8cfbe;
+  text-align: center;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pullquote-attrib {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #8a7a64;
+  font-style: normal;
+  margin-top: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Back link / footer
+   -------------------------------------------------------------------------- */
+
+.back-home {
+  margin-top: 96px;
+  padding-top: 32px;
+  border-top: 1px solid #d8cfbe;
+  text-align: center;
+}
+
+.back-home a {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #141414;
+  border-bottom: 0;
+}
+
+.back-home a:hover {
+  color: #b8431d;
+}
+
+.back-home .arrow {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  margin-right: 8px;
+  transition: margin-right 0.25s ease;
+  display: inline-block;
+}
+
+.back-home a:hover .arrow {
+  margin-right: 14px;
+}
+
+.footer {
+  padding: 48px;
+  border-top: 1px solid #e0d8c7;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8a7a64;
+  background-color: #f6f2ea;
+}
+
+.footer span {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.gallery-cell {
+  padding: 0;
+}
+
+.lede-spacing-large {
+  margin-bottom: 24px;
+}
+
+.lede-spacing-small {
+  margin-bottom: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   11. Small-screen adjustments  (basic, no grid/flex)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  h1,
+  .hero-title {
+    font-size: 56px;
+  }
+  .destination-title {
+    font-size: 64px;
+  }
+  .page,
+  .topbar {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .layout td,
+  .layout .col-wide {
+    display: block;
+    width: 100%;
+    padding: 24px 0;
+    border-right: 0;
+  }
+  .layout .col-narrow {
+    border-right: 0;
+    border-bottom: 1px solid #d8cfbe;
+  }
+  .gallery td {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .index-country {
+    display: none;
+  }
+  .pullquote {
+    font-size: 26px;
+    padding: 40px 20px;
+  }
+}

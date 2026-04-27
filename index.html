@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Five Stunning Places — Afeka Project</title>
+    <meta
+      name="description"
+      content="Five of the most beautiful places I'd love to visit. A small hand-built site for the Afeka web course."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fixes.css" />
+  </head>
+  <body>
+    <!-- ======================================================================
+     Top bar
+     ====================================================================== -->
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">Five Stunning Places</a>
+        <span class="brand-meta"
+          >Afeka &nbsp;/&nbsp; Mordo &nbsp;/&nbsp; 2026</span
+        >
+      </div>
+    </div>
+
+    <!-- ======================================================================
+     Hero
+     ====================================================================== -->
+    <div class="page">
+      <span class="eyebrow">A hand-picked atlas &nbsp;·&nbsp; Vol. 01</span>
+
+      <h1 class="hero-title">
+        The five most stunning places <em>I would love</em> to visit.
+      </h1>
+
+      <p class="lede">
+        A small personal atlas of five places that keep showing up in my
+        daydreams — ancient stone carved into pink cliffs, turquoise alpine
+        lakes, sleepy white villages hanging over the Aegean, and the wild,
+        wind-scoured edges of the world. Five pages, one map, one wishlist.
+      </p>
+
+      <div class="hero-meta">
+        <span>Five destinations</span>
+        <span>Three continents</span>
+        <span>One map</span>
+      </div>
+
+      <hr class="rule" />
+
+      <!-- ==================================================================
+         Destination index  (table used for semantic 5-column list)
+         ================================================================== -->
+      <h2>The list</h2>
+      <p class="lede lede-spacing-large">
+        Click a name to open its page. Each entry gets five paragraphs, a few
+        images, and one good reason to book the flight.
+      </p>
+
+      <table class="index-table">
+        <tr>
+          <td class="index-num">01</td>
+          <td class="index-name"><a href="kyoto.html">Kyoto</a></td>
+          <td class="index-country">Japan &nbsp;·&nbsp; East Asia</td>
+          <td class="index-arrow">&rarr;</td>
+        </tr>
+        <tr>
+          <td class="index-num">02</td>
+          <td class="index-name"><a href="petra.html">Petra</a></td>
+          <td class="index-country">Jordan &nbsp;·&nbsp; Middle East</td>
+          <td class="index-arrow">&rarr;</td>
+        </tr>
+        <tr>
+          <td class="index-num">03</td>
+          <td class="index-name"><a href="banff.html">Banff</a></td>
+          <td class="index-country">Canada &nbsp;·&nbsp; North America</td>
+          <td class="index-arrow">&rarr;</td>
+        </tr>
+        <tr>
+          <td class="index-num">04</td>
+          <td class="index-name"><a href="santorini.html">Santorini</a></td>
+          <td class="index-country">Greece &nbsp;·&nbsp; Mediterranean</td>
+          <td class="index-arrow">&rarr;</td>
+        </tr>
+        <tr>
+          <td class="index-num">05</td>
+          <td class="index-name"><a href="patagonia.html">Patagonia</a></td>
+          <td class="index-country">
+            Chile &amp; Argentina &nbsp;·&nbsp; South America
+          </td>
+          <td class="index-arrow">&rarr;</td>
+        </tr>
+      </table>
+
+      <!-- ==================================================================
+         World map with positioned pins
+         ================================================================== -->
+      <div class="map-section">
+        <h2>On the map</h2>
+        <p class="lede lede-spacing-small">
+          Hover a pin to see which place it belongs to. The five of them
+          together trace an almost-complete lap of the planet.
+        </p>
+
+        <div class="map-wrap">
+          <div class="map-inner">
+            <img
+              class="worldmap"
+              src="map.svg"
+              alt="World map showing the location of each destination as a small red pin."
+            />
+
+            <a class="pin pin-kyoto" href="kyoto.html">
+              <span class="pin-label">01 &nbsp;Kyoto</span>
+            </a>
+            <a class="pin pin-petra" href="petra.html">
+              <span class="pin-label">02 &nbsp;Petra</span>
+            </a>
+            <a class="pin pin-banff" href="banff.html">
+              <span class="pin-label">03 &nbsp;Banff</span>
+            </a>
+            <a class="pin pin-santorini" href="santorini.html">
+              <span class="pin-label">04 &nbsp;Santorini</span>
+            </a>
+            <a class="pin pin-patagonia" href="patagonia.html">
+              <span class="pin-label">05 &nbsp;Patagonia</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.page -->
+
+    <!-- ======================================================================
+     Footer
+     ====================================================================== -->
+    <div class="footer">
+      <span>Afeka &nbsp;·&nbsp; HTML &amp; CSS Assignment 01</span>
+      <span>Built by Mordo</span>
+      <span>2026</span>
+    </div>
+  </body>
+</html>
